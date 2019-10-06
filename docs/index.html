@@ -1,0 +1,286 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Visually Display Information on Maps</title>
+
+		<meta name="description" content="Visually Display Information on Maps (For CDC Websites)">
+		<meta name="author" content="Cosmin Potocean">
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/blue-custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<!--   SLIDE   -->
+				<section>
+
+					<h2>Visually Display Information on Maps</h2>
+
+					<img alt="gtss world map" src="./img/01-gtss-world.png"  height="170" width="310">
+					<img alt="us counties colored map"  src="./img/01-us_choice1_old.png"  height="170" width="310">
+					<img alt="us bubble map" src="./img/01-bubble2.png"  height="170" width="310">
+					<img alt="us counties map" src="./img/01-us_choice2.png"  height="170" width="310">
+
+					<small>DataVIZ SAG Day at CDC, Oct./07/2019</small>
+
+				</section>
+				<!-- ./ SLIDE  -->
+
+				<!--   SLIDE   -->
+				<section>
+
+					<h2>Cosmin Potocean</h2>
+					<ul>
+						<li>Software Dev/Engineer</li>
+						<br>
+						<li>Northrop Grumman </li>
+						<img alt="ng logo" src="./img/ng-logo.png" height="45" width="180">
+						<li>CDC - NCCDPHP - Chronic </li>
+						<img alt="ng logo" src="./img/cdc-logo.png" height="45" width="180"> 
+					</ul>
+	
+					<p style="text-align: left;">
+						<br>
+							<small>
+								<a href="https://www.linkedin.com/in/cosmin-potocean-3318b964/">LinkedIn</a>
+							</small>
+						<br>
+							<small>
+								<a href="https://github.com/cosmycx/">GitHub</a>
+							</small>
+					</p>
+
+				</section>
+				<!-- ./ SLIDE  -->
+
+				<!--   SLIDE   -->
+				<section>
+					<h2>What Will Cover</h2>
+
+					<ul>
+							<li>Why Graphical Display</li>
+							<li>Data Maps</li>
+							<li>Process of a Custom Map</li>
+							<li>Examples</li>
+							<li>Other Visualizations</li>
+						</ul>
+
+				</section>
+				<!-- ./ SLIDE  -->
+
+				<!--   SLIDE   -->
+				<section>
+					<h2>Scenario: Cholera Outbreak in London: 1854</h2>
+					<img alt="cholera outbreak map" src="./img/02-snow-cholera-map.jpg"  height="380" width="700">
+					<small>
+						<a href="https://blogs.cdc.gov/publichealthmatters/2017/03/a-legacy-of-disease-detectives/">John Snow: A Legacy of Disease Detectives</a>
+					</small>
+				</section>
+				<!-- ./ SLIDE  -->
+	
+				<!--   SLIDE   -->
+				<section>
+					<h2>Why Graphical Display</h2>
+						<ul>	
+							<li>shows the data</li>
+							<li>..complex ideas communicated with clarity, precission, and efficiency</li>
+							<li>..viewer to think about substance rather than the methodology..</li>
+						</ul>
+						<br>
+						<img style="margin-right: 20px;" alt="titanic survival" src="./img/03-titanic-data.png"  height="185" width="350">
+						<img  style="margin-left: 20px;" alt="titanic survival" src="./img/03-titanic-visual.png"  height="185" width="350">
+
+					<div style="text-align: left;">
+						<img alt="visual display of quantitative information" src="./img/03-visual-diplay-of-quant-data.png"  height="55" width="40">
+						<small style="margin-top: 42px;font-size:0.4em;">Visual Display of Quantitative Infomation</small>
+					</div>
+				</section>
+				<!-- ./ SLIDE  -->
+
+				<!--   SLIDE   -->
+				<section>
+					<h2>Data Maps</h2>
+					<img alt="wcms" src="./img/04-wcmsdatamaps.png"  height="240" width="820">
+					<p>WCMS Data Maps</p>
+					<p><small>One picture can carry large volume of information</small></p>
+
+				</section>
+				<!-- ./ SLIDE  -->
+
+				<!--   SLIDE   -->
+				<section>
+					<h2>Process of a Custom Map 1/3</h2>
+          <ul style="position: relative;"">
+						<li>Shapefile 
+							<br><small>geospatial vector data for GIS <br>
+							<a href="https://www.census.gov/programs-surveys/geography.html">https://www.census.gov/programs-surveys/geography.html</a>
+							<br>
+							<a href="https://www.naturalearthdata.com/">https://www.naturalearthdata.com/</a>
+							<br>GDAL is a translator library <a href="https://gdal.org/">https://gdal.org/</a>
+							</small>
+						</li>
+						<br>
+
+					<img style="position: absolute; left: 500px; top: 300px;" alt="geojson vs. topojson borders" src="./img/05-geo-topo-json.png"  height="125" width="200">
+				
+					<li>GeoJSON
+						<br><small>encoding geographic data
+						<br><a href="http://geojson.org/">http://geojson.org/</a><br>
+						The GeoJSON Specification (RFC 7946)
+						</small></li>
+						<br>
+						<li>TopoJSON
+						<br><small>simplified encoding geographic data <br>
+						eliminates redundancy, more efficient, smaller size
+						</small>
+					</li>	
+
+				</ul>
+
+					
+				</section>
+				<!-- ./ SLIDE  -->
+	
+				<!--   SLIDE   -->
+				<section>
+					<h2>Process of a Custom Map 2/3</h2>
+					<ul>
+						<li>HTML, CSS, JavaScript</li>
+						<li><a href="https://d3js.org/">D3.js </a> Data-Driven Documents</li>
+					</ul>
+
+					<pre><code class="hljs" data-trim >
+							.....
+							g.selectAll('path')
+							.data(stateInView)
+							.enter()
+							.append('path')
+							.....
+							.style('fill', function (d) { 
+								// ############## MAP COLORS ############## ADI
+								if (_mapType === 'mapChoice1' && d.properties._ADI && parseFloat(d.properties._ADI)) {
+									let adi = d.properties._ADI
+									const mapChoice1 = legend.mapChoice1;
+									if (adi < 107.1) { return mapChoice1.low.color }
+									if (adi >= 107.1 && adi < 111.9) { return mapChoice1.med.color }
+									if (adi >= 111.9) { return mapChoice1.high.color }
+								}
+							......
+					</code></pre>
+
+				</section>
+				<!-- ./ SLIDE  -->
+
+				<!--   SLIDE   -->
+				<section>
+					<h2>Process of a Custom Map 3/3</h2>
+          <iframe style="background-color:#EAE7FC"width="700" height="370" data-src="https://nccd.cdc.gov/nccdproxyInternet/GTSSdata/publicAPI/GetWCMSLookups"></iframe>
+          <ul style="list-style: none">
+						<li><small>1 - Data is loaded on the map topojson file</small></li>
+            <li><small>2 - Data is loaded from a local file</small></li>						
+            <li><small>3 - Data is loaded from an API: https://nccd.cdc.gov/nccdproxyInternet/GTSSdata/publicAPI/GetWCMSLookups</small></li>
+          </ul>
+				</section>
+				<!-- ./ SLIDE  -->
+
+				<!--   SLIDE   -->
+				<section>
+					<h5>Example: National Diabetes Prevention Program</h5>
+					<iframe data-src="https://www.cdc.gov/diabetes/programs/national-dpp-maps/index.html" width="900" height="550" frameborder="0" marginwidth="0" marginheight="0" scrolling="yes" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> 
+					</iframe>
+				</section>
+				<!-- ./ SLIDE  -->
+					
+				<!--   SLIDE   -->
+				<section>
+					<h5>Example: Global Tobacco Surveillance System Data</h5>
+					<iframe data-src="https://www.cdc.gov/tobacco/global/gtss/gtssdata/index.html" width="900" height="550" frameborder="0" marginwidth="0" marginheight="0" scrolling="yes" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> 
+					</iframe>
+				</section>
+				<!-- ./ SLIDE  -->
+		
+				<!--   SLIDE   -->
+				<section>
+					<h2>Other Visualizations</h2>
+
+						<img alt="example" width="310" height="200" data-src="./img/09-visionhealthdatachart.png">
+						<img alt="example" width="310" height="200" data-src="./img/09-bubble1.png">
+						<img alt="example" width="310" height="200" data-src="./img/09-vehss.png">												
+						<img alt="example" width="310" height="200" data-src="./img/09-map-contr.png">	
+
+				</section>
+				<!-- ./ SLIDE  -->
+
+				<!--   SLIDE   -->
+				<section>
+						<h2>What Did We Cover</h2>
+	
+						<ul>
+								<li>Why Graphical Display &nbsp;<span style="color:green;">&check;</span> </li>
+								<li>Data Maps &nbsp;<span style="color:green;">&check;</span> </li>
+								<li>Process of a Custom Map &nbsp;<span style="color:green;">&check;</span> </li>
+								<li>Examples &nbsp;<span style="color:green;">&check;</span> </li>
+								<li>Other Visualizations &nbsp;<span style="color:green;">&check;</span> </li>
+							</ul>
+	
+					</section>
+					<!-- ./ SLIDE  -->
+			
+				<!--   SLIDE   -->
+				<section>
+					<h2>Thank you</h2>
+					<br>
+					<h1 style="color:#C8C1EF;">?</h1>
+						<br>
+						<br>
+						<small>
+							presentation: <a href="https://github.com/cosmycx/visually-display-info-maps">https://github.com/cosmycx/visually-display-info-maps</a>
+						</small>
+						<small>
+							presentation source code: <a href="https://github.com/cosmycx/visually-display-info-maps">https://github.com/cosmycx/visually-display-info-maps</a>
+						</small>
+						<br><br>
+						<small>
+							presentation used: <a href="https://github.com/hakimel/reveal.js/">reveal.js</a>
+						</small>
+				</section>
+				<!-- ./ SLIDE  -->
+
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
