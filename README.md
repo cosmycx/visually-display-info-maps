@@ -2,7 +2,10 @@
 
 
 ### Presentation
+short link:
+[http://bit.ly/2OthwxE](http://bit.ly/2OthwxE)
 
+link:
 [https://cosmycx.github.io/visually-display-info-maps/](https://cosmycx.github.io/visually-display-info-maps/)
 
 
