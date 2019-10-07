@@ -288,7 +288,7 @@
 			Reveal.initialize({
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
-					// { src: 'plugin/markdown/markdown.js' },
+					// { src: 'plugin/markdown/markdown.js' }, // this does not work in IE as is, needs polyfill
 					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true }
 				]
